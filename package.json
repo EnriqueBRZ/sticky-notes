@@ -1,0 +1,12 @@
+{
+  "name": "notes-generator",
+  "version": "1.0.0",
+  "description": "sticky notes generator",
+  "license": "ISC",
+  "author": "Enrique Marmolejo",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

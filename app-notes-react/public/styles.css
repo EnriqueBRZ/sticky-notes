@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Montserrat";
+    background-image: url("https://www.transparenttextures.com/patterns/dark-tire.png");
+}
+
+.layout {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: "header header"
+                         "create notes"
+                         "footer footer";
+    grid-template-columns: 27% auto;
+}
+
+.layout__head {
+    grid-area: header;
+    font-size: 2.5rem;
+    padding: 2rem 0 2rem 5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    background-color: rgb(54, 54, 224);
+    text-shadow: 0 0 3px rgba(9, 195, 247, 0.7);
+}
+
+.layout__create {
+    max-height: 300px;
+    grid-area: create;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3.5rem 0 3.5rem 6rem;
+    gap: 2.5rem;
+}
+
+.create__title,
+.create__content {
+    width: 100%;
+    font-size: 2rem;
+    padding: 1rem 1.2rem 1rem 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #bab9b9;
+    color: #585555;
+}
+
+.create__title::placeholder,
+.create__content::placeholder {
+    font-family: "McLaren";
+    font-size: 2.5rem;
+    color: #ccc;
+}
+
+.create__submit {
+    flex-basis: calc(20% - 1rem);
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 1rem 1.8rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: #3bc0ff;
+    color: #fff;
+    box-shadow: 0 0 10px  rgb(54, 54, 224, 0.5) inset;
+    transition: all 300ms ease-in;
+}
+
+.create__submit:hover {
+    box-shadow: 0 0  15px #fff inset;
+}
+
+.layout__notes {
+    grid-area: notes;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5rem 0 0.5rem 2rem ;
+    gap: 2.2rem;
+    padding: 2rem;
+}
+
+.notes__note {
+    box-sizing: border-box;
+    width: 270px;
+    max-height: 170px;
+    padding: 1rem;
+    background-color: cornsilk;
+    box-shadow: 0 0 10px #fff inset;
+    border-radius: 5px 10px 20px 5px;
+    overflow: hidden;
+}
+
+@media (max-width: 500px) {
+    .notes__note {
+        flex-basis: 95%;
+    }
+}
+
+.notes__note--head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.notes__note--head h2 {
+    font-size: 1.5rem;
+    padding: 10px 0;
+}
+
+.notes__note--head button {
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    padding: 7px;
+    background-color: rgba(233, 249, 0, 0.2);
+    box-shadow: 0 0 15px rgb(98, 79, 1) inset;
+    transition: all 300ms ease-in-out;
+}
+
+.notes__note--head button:hover {
+    box-shadow: 0 0 15px red inset;
+}
+
+.notes__note p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    margin: 10px 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.notes__note time {
+    display: block;
+    text-align: right;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.layout__footer {
+    grid-area: footer;
+    margin-top: 1rem;
+    padding: 2rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: rgb(54, 54, 224);;
+    text-align: center;
+}
